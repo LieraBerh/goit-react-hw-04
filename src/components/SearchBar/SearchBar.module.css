@@ -1,0 +1,24 @@
+.header {
+  background-color: rgba(236, 218, 195, 0.7);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.submit_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.input {
+  padding: 8px 15px;
+}

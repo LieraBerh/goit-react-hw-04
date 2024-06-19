@@ -6,7 +6,7 @@ const ImageGallery = ({ items, handleModalOpen }) => {
   return (
     <ul className={s.gallery}>
       {items.map(({ id, urls, alt_description }) => (
-        <li key={id}>
+        <li key={id} className={s.gallery_item}>
           <ImageCard
             src={urls}
             alt={alt_description}

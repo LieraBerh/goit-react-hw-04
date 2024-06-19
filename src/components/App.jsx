@@ -79,7 +79,12 @@ function App() {
       <SearchBar onSearch={handleSearch} />
       {loading && <Loader />}
       {error && <ErrorMessage />}
-      {isEmpty && <p>No results for query {query} </p>}
+      {isEmpty && (
+        <p className="no_result_msg">
+          No results for query: &nbsp;
+          <span className="no_result_msg_span">{query}</span>
+        </p>
+      )}
       {photos?.length > 0 && (
         <ImageGallery items={photos} handleModalOpen={handleModalOpen} />
       )}

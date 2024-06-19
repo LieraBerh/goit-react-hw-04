@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import s from "./ImageModal.module.css";
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 const customStyles = {
@@ -9,8 +10,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    width: "80%",
-    padding: "5px",
+    padding: "10px",
   },
   overlay: {
     backgroundColor: "rgba(40, 40, 40, 0.75)",
@@ -26,7 +26,11 @@ export const ImageModal = ({ modalIsOpen, closeModal, selectImg }) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <img src={selectImg?.src} alt={selectImg?.alt} />
+        <img
+          src={selectImg?.src}
+          alt={selectImg?.alt}
+          className={s.modal_img}
+        />
       </Modal>
     </div>
   );
