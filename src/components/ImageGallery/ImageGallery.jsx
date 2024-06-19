@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import ImageCard from "./ImageCard/ImageCard";
+import s from "./ImageGallery.module.css";
 
 const ImageGallery = ({ items, handleModalOpen }) => {
   return (
-    <ul>
+    <ul className={s.gallery}>
       {items.map(({ id, urls, alt_description }) => (
         <li key={id}>
           <ImageCard
